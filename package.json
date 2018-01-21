@@ -1,5 +1,5 @@
 {
-  "name": "boilermaker",
+  "name": "stackathon",
   "version": "1.0.0",
   "description": "Some boilerplate code to get you started - get shakin'!",
   "engines": {
@@ -35,14 +35,19 @@
     "pg-hstore": "^2.3.2",
     "prop-types": "^15.5.8",
     "react": "^16.0.0",
+    "react-d3-basic": "^1.6.11",
     "react-dom": "^16.0.0",
-    "react-redux": "^5.0.2",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.1",
+    "recharts": "^1.0.0-beta.9",
     "redux": "^3.6.0",
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.2.0",
+    "request": "^2.83.0",
+    "semantic-ui-react": "^0.77.2",
     "sequelize": "^4.3.1",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "transform-runtime": "0.0.0"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.9.0",

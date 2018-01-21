@@ -1,5 +1,8 @@
 body {
   font-family: sans-serif;
+  margin: 0;
+  background-color: #d6d6ff;
+  font-family: 'Pontano Sans', sans-serif;
 }
 
 a {
@@ -18,4 +21,57 @@ nav a {
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+ul {
+  column-count: 4;
+  list-style: none;
+}
+
+li {
+  padding: 5px;  
+  
+}
+
+#barchart {
+  display: flex;
+  justify-content: center;
+}
+
+#threadNames {
+  display: flex;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#linechart {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+#maindiv {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#threadinfobox {
+  display: flex;
+  height: 500px;
+  width: 500px; 
+  border-color: blue;
+  padding-left: 50px;
+}
+
+#threadinfotext{
+  justify-content: center;
+ 
+}
+
+
+img{
+  height: 300px;
+  width: 300px;
 }
