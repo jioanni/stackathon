@@ -20,8 +20,8 @@ class Data extends Component {
     }
 
     componentDidMount(){
-        this.props.getData(this.state)
-        this.interval1 = setInterval(()=>this.props.getData(this.state), 5000)
+        this.props.getData(this.state.selection)
+        this.interval1 = setInterval(()=>this.props.getData(this.state.selection), 5000)
     }
 
     componentWillUnmount(){
@@ -33,10 +33,11 @@ class Data extends Component {
         return array
     }
  
-    handleChange(event){
+    handleChange(){
         this.setState({
             selection: event.target.value
         })
+        // clearInterval(this.interval1)
      
     }
 
@@ -68,7 +69,7 @@ class Data extends Component {
             </div>
             <div id = "threadNames">
                 <ul id="map-list">
-            {this.props.data.map((thread) => <li key={thread.id}><Link to = {`data/${thread.id}`}>{thread.title}</Link>: {thread.ups}</li>  )}
+            {this.props.data.map((thread) => <li key={thread.id}><Link to = {`${this.state.selection}/${thread.id}`}>{thread.title}</Link>: {thread.ups}</li>  )}
                 </ul>
             </div>
             </div>
@@ -86,8 +87,8 @@ const mapStateToProps = (storeState) => {
 }
 
 const mapDispatchToProps = (dispatch) =>({
-    getData(){
-return dispatch(retrieveThreads())
+    getData(subreddit){
+return dispatch(retrieveThreads(subreddit))
     }
 });
 

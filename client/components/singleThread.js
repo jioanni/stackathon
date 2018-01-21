@@ -20,7 +20,7 @@ class SingleThread extends Component {
         this.threadRetriever()
         this.interval1 = setInterval(() => this.threadRetriever(), 5000)
         this.interval2 = setInterval(()=> this.dataAgg(), 5000)
-        this.interval3 = setInterval(() => this.props.getData(), 5000)
+        // this.interval3 = setInterval(() => this.props.getData(), 5000)
     }
 
     componentWillUnmount(){
@@ -45,7 +45,7 @@ class SingleThread extends Component {
 
         render () {
          
-            const data = this.state.data
+            console.log(this.props.match.params.id)
             
 
           return (

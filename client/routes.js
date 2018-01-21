@@ -24,8 +24,8 @@ class Routes extends Component {
             {/* Routes placed here are available to all visitors */}
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
-            <Route exact path='/data' component={dataContainer} />
-            <Route exact path='/data/:id' component={SingleThreadContainer}/>
+            <Route exact path='/data/:subreddit' component={dataContainer} />
+            <Route exact path='/data/:subreddit/:id' component={SingleThreadContainer}/>
             {
               isLoggedIn &&
                 <Switch>

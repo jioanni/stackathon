@@ -35,9 +35,9 @@ export default function (state = [], action) {
 /**
  * THUNK CREATORS
  */
-export const retrieveThreads = (dispatch) => 
+export const retrieveThreads = (subreddit) => 
   dispatch =>
-    axios.get('/api/data')
+    axios.get('/api/data/'+subreddit)
       .then(res => res.data)
       .then((apiReturn) => {
           var threads = apiReturn.data.children;
