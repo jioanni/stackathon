@@ -17,15 +17,16 @@ class SingleThread extends Component {
     }
 
     componentDidMount() {
-        this.props.getData()
         this.threadRetriever()
         this.interval1 = setInterval(() => this.threadRetriever(), 5000)
         this.interval2 = setInterval(()=> this.dataAgg(), 5000)
+        this.interval3 = setInterval(() => this.props.getData(), 5000)
     }
 
     componentWillUnmount(){
         clearInterval(this.interval1)
         clearInterval(this.interval2)
+        clearInterval(this.interval3)
     }
 
     threadRetriever() {

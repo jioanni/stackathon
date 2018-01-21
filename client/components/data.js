@@ -21,7 +21,11 @@ class Data extends Component {
 
     componentDidMount(){
         this.props.getData(this.state)
-        setInterval(()=>this.props.getData(this.state), 15000)
+        this.interval1 = setInterval(()=>this.props.getData(this.state), 5000)
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.interval1)
     }
 
     dataSaver(dataPoint, array){
@@ -39,6 +43,8 @@ class Data extends Component {
     
     
     render() {
+
+        console.log(this.state)
     
         
 

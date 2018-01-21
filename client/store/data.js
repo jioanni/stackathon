@@ -35,7 +35,7 @@ export default function (state = [], action) {
 /**
  * THUNK CREATORS
  */
-export const retrieveThreads = () => 
+export const retrieveThreads = (dispatch) => 
   dispatch =>
     axios.get('/api/data')
       .then(res => res.data)
