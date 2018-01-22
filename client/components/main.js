@@ -16,7 +16,7 @@ const Main = (props) => {
 
   return (
     <div>
-      <h1>UPVOTE TRACKER</h1>
+      <h1>S T A T B O Y E</h1>
       <nav>
         {
           isLoggedIn
